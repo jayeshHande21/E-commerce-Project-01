@@ -1,0 +1,340 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  /* background-color: black; */
+}
+
+/* Heading styleSheet -------------------------------*/
+.Header {
+  background-color: white;
+  display: flex;
+}
+.search {
+  margin: auto;
+}
+.Header input {
+  width: 500px;
+  height: 30px;
+  border-radius: 1rem;
+}
+
+.Header nav {
+  margin: auto;
+}
+.Header label {
+  font-weight: bold;
+}
+
+/* ----------------------------- */
+
+.Price-details {
+  border: 1px solid grey;
+  width: 400px;
+  height: 200px;
+}
+
+.category {
+  height: 220px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid brown;
+  color: orange;
+  margin: 4px;
+  cursor: pointer;
+  width: 400px;
+  /* border-radius: 1rem; */
+}
+button {
+  cursor: pointer;
+}
+.category h4,
+h3 {
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+.exploreDiv {
+  width: 100%;
+  border: 1px solid grey;
+  height: 150px;
+  margin: 10px;
+}
+
+.smallHeading {
+  width: 100%;
+  border: 1px solid grey;
+  height: 70px;
+  margin: 10px;
+  background-color: tomato;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+nav {
+  margin: 10px;
+}
+
+.Filters {
+  border: 1px solid black;
+  width: 250px;
+  display: inline-block;
+}
+
+.loading {
+  width: 400px;
+  height: 400px;
+  color: green;
+  margin: auto;
+}
+.success-message {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.price-Tag {
+  border: 1px solid black;
+  width: 300px;
+}
+.Fly {
+  color: #f5a623;
+}
+.checkout {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  width: 300px;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 1rem;
+}
+
+label {
+  display: block;
+}
+.requiredSignIn {
+  padding: 10px;
+  width: 250px;
+}
+.signIn {
+  display: inline;
+}
+
+.userProfile {
+  margin: auto;
+  width: 450px;
+  height: 300px;
+  box-shadow: 2px 2px 10px 4px rgb(230, 209, 230);
+}
+.userProfile button {
+  margin-top: 80px;
+  width: 100px;
+  height: 32px;
+  color: white;
+  background-color: rgb(216, 35, 35);
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.userProfile p {
+  font-size: 24px;
+}
+.profile {
+  color: grey;
+  font-weight: bold;
+}
+.addNewAdd {
+  width: 600px;
+  border: 2.5px solid blue;
+  height: 80px;
+  margin: auto;
+}
+.addressBtn {
+  float: left;
+  margin-top: 22px;
+  padding: 5px;
+  margin-left: 20px;
+  width: 45px;
+  height: 40px;
+  background-color: white;
+  color: blue;
+  border-radius: 4px;
+}
+.addNewAdd h3 {
+  color: grey;
+}
+.btnContent {
+  font-size: 29px;
+  margin: auto;
+}
+.addressBtn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.fullscreen-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-form form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.fullscreen-form input,
+.fullscreen-form button {
+  margin-bottom: 10px;
+}
+
+.priceDetails {
+  border: 1px solid rebeccapurple;
+  width: 350px;
+  height: 250px;
+  box-shadow: 1px 2px 2px 2px rgba(1, 0, 1, 1);
+}
+.orderList {
+  margin-right: 20px;
+  border: 1px solid orange;
+  width: 850px;
+  height: 500px;
+}
+.addressContent {
+  display: flex;
+}
+.orderBtn {
+  display: block;
+  width: 300px;
+  height: 40px;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+.right {
+  margin-left: 100px;
+}
+ul {
+  list-style-type: none;
+}
+.cartItemContent {
+  display: flex;
+}
+.cartItemContent h3 {
+  display: block;
+}
+
+/* Home Page StyleSheet */
+
+.HomeContent {
+  background-color: black;
+  height: 426px;
+  /* width: 1200px; */
+}
+.product-card {
+  display: inline-block;
+  margin: 20px;
+
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 4px #f5a623;
+}
+.productList {
+  border: 2px solid #f5a623;
+  font-size: 18px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ExploreMain {
+  display: flex;
+}
+.Filters {
+  width: 200px;
+  padding: 30px;
+  height: 960px;
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.productList p {
+  color: white;
+  text-decoration: none;
+}
+
+/* Home Page StyleSheet------------ */
+.categoryHome {
+  font-weight: bold;
+}
+.category-card {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin: 20px;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 4px #f5a623;
+  background-color: white;
+}
+
+/* Login Page StyleSheet */
+.signIn {
+  display: flex;
+  padding: 10px;
+  background-color: black;
+  margin: 0px;
+}
+.signInForm {
+  position: relative;
+  padding: 30px;
+  margin-left: 130px;
+  border: 2px solid #f5a623;
+  border-radius: 1rem;
+  box-shadow: 1px 2px 2px 2px #f5a623;
+  /* background-color:orange */
+}
+.signInForm input {
+  border-radius: 0.5rem;
+}
+.signInForm label {
+  color: white;
+}
+.signInHeading h1 {
+  font-size: 60px;
+  color: white;
+}
+.signInHeading h2 {
+  color: white;
+}
+.IN {
+  color: #f5a623;
+}
+.signInForm button {
+  border-radius: 0.5rem;
+  height: 30px;
+  font-weight: bold;
+}
+.signInForm button:hover {
+  background-color: #f5a623;
+  margin-top: 1px;
+}
