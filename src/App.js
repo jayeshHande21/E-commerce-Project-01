@@ -1,4 +1,5 @@
 import "./styles.css";
+import boot from "./boot.png";
 
 import { Home } from "./Pages/Home";
 import { AddToCart } from "./Pages/AddToCart";
@@ -15,6 +16,7 @@ import { BootContext } from "./Context/BootContext";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { useContext } from "react";
+import Mockman from "mockman-js";
 
 export default function App() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -34,14 +36,16 @@ export default function App() {
     margin: "1rem 0",
     fontWeight: isActive ? "600" : "200",
     padding: isActive ? "1rem" : "0.5rem",
-    color: isActive ? "red" : ""
+    color: isActive ? "red" : "",
   });
 
   return (
     <div className="App">
       <div className="Header">
         <h1>
-          Feet<span className="Fly">Fly</span>
+          Feet<span className="Fly">Fly</span>{" "}
+          {/* <h3> Where Comfort Meets Style"</h3> */}
+          <img src={boot} alt="mockBee logo" width="50" height="40" />
         </h1>
 
         <div className="search">
@@ -114,6 +118,7 @@ export default function App() {
             </RequiresAuth>
           }
         />
+        <Route path="/mockman" element={<Mockman />} />
       </Routes>
     </div>
   );

@@ -248,13 +248,16 @@ ul {
   margin: 20px;
 
   border-radius: 20px;
-  box-shadow: 2px 2px 10px 4px #f5a623;
+  box-shadow: 2px 1px 10px 2px grey;
+  /* #f5a623; */
 }
 .productList {
   border: 2px solid #f5a623;
   font-size: 18px;
-  height: 250px;
-  padding: 20px;
+  font-family: cursive;
+  height: 350px;
+  width: 200px;
+  padding: 30px;
   border-radius: 20px;
   color: black;
   cursor: pointer;
@@ -262,6 +265,20 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.cart-button {
+  display: flex;
+}
+.productRating {
+  background-color: green;
+  color: white;
+  margin-left: 80px;
+  border-radius: 4px;
+  padding: 1px;
+}
+.productPrice {
+  margin-right: 100px;
+  font-weight: bold;
 }
 
 .ExploreMain {
@@ -277,8 +294,41 @@ ul {
 }
 
 .productList p {
-  color: white;
+  color: black;
   text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.productList button {
+  color: brown;
+  font-weight: 900;
+  border-radius: 4px;
+  border: 1px solid grey;
+  margin: 3px;
+}
+
+.productList .explore-cartBtn {
+  width: 250px;
+  height: 60px;
+  padding: 8px;
+  color: white;
+  background-color: black;
+}
+.explore-wishlistBtn {
+  color: grey;
+  margin-left: 200px;
+}
+.wishlistSymbol {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.productList .explore-cartBtn:hover {
+  background-color: #f5a623;
+}
+.explore-cart-symbol {
+  font-size: 20px; /* Set the font size */
+  margin-right: 5px; /* Add some spacing to the right */
 }
 
 /* Home Page StyleSheet------------ */
@@ -337,4 +387,11 @@ ul {
 .signInForm button:hover {
   background-color: #f5a623;
   margin-top: 1px;
+}
+
+/* handle Product Images styling*/
+
+.productList img {
+  height: 170px;
+  width: 180px;
 }

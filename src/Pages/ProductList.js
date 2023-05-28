@@ -16,7 +16,7 @@ export const ProductList = () => {
     handleSortingHighToLow,
     showSuccessMessage,
     clearFilter,
-    rangeFilter
+    rangeFilter,
   } = useContext(BootContext);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -151,21 +151,29 @@ export const ProductList = () => {
               return (
                 <div key={product.name} className="product-card">
                   <div className="productList">
-                    <img
-                      src={product.img}
-                      alt={product.name}
-                      style={{ height: "100px" }}
-                    />
-                    {product.name}
-                    <br />
-                    {product.details} <br />
-                    {product.currency} {product.price} <br />
-                    <br />
-                    Category : {product.category} <br />
-                    Size : {product.size} <br />
-                    Rating : {product.rating} <br />
-                    Product Category : {product.productCategory} <br />
-                    {/* {!buttonClicked ? (
+                    {" "}
+                    <p
+                      className="explore-wishlistBtn"
+                      onClick={() => handleWishListBtn(product)}
+                    >
+                      <span className="wishlistSymbol">🤍</span>
+                    </p>
+                    <NavLink to={`/Individual/${product.id}`}>
+                      <img src={product.img} alt={product.name} />
+                      <p>
+                        {product.name}
+                        <span className="productRating">
+                          {product.rating}⭐
+                        </span>
+                      </p>
+                      {/* {product.details} <br /> */}
+                      <p className="productPrice">₹ {product.price}</p>
+
+                      {/* Category : {product.category} <br /> */}
+                      {/* Size : {product.size} <br /> */}
+                      {/* Rating : {product.rating} <br /> */}
+                      {/* Product Category : {product.productCategory} <br /> */}
+                      {/* {!buttonClicked ? (
                 <button onClick={() => handleCartBtn(product)}>
                   Add To Cart
                 </button>
@@ -174,8 +182,12 @@ export const ProductList = () => {
                   <NavLink to="/Cart">Go To Cart</NavLink>
                 </button>
               )} */}
-                    <button onClick={() => handleCartBtn(product)}>
-                      Add To Cart
+                    </NavLink>
+                    <button
+                      className="explore-cartBtn"
+                      onClick={() => handleCartBtn(product)}
+                    >
+                      <span className="explore-cart-symbol">🛒</span>Add To Cart
                     </button>{" "}
                     {showSuccessMessage && (
                       <div className="success-message">
@@ -183,18 +195,15 @@ export const ProductList = () => {
                       </div>
                     )}
                     {""}
-                    <button onClick={() => handleWishListBtn(product)}>
+                    {/* <button onClick={() => handleWishListBtn(product)}>
                       Add to WishList
-                    </button>{" "}
+                    </button>{" "} */}
                     {showSuccessMessage && (
                       <div className="success-message">
                         Item Successfully Added!{" "}
                       </div>
                     )}
                     <br /> <br />
-                    <NavLink to={`/Individual/${product.id}`}>
-                      View Item
-                    </NavLink>
                   </div>
                 </div>
               );

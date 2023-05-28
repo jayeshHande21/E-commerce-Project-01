@@ -5,12 +5,15 @@ import { BootContext, BootProvider } from "./Context/BootContext";
 import { AuthContext, AuthProvider } from "./Context/AuthContext";
 
 import App from "./App";
+import { makeServer } from "./server";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 export { BootContext };
 export { AuthContext };
+
+makeServer();
 
 root.render(
   <StrictMode>
