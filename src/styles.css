@@ -98,18 +98,23 @@ nav {
 }
 
 .price-Tag {
-  border: 1px solid black;
+  border: 3px solid black;
   width: 300px;
+  border-radius: 8px;
+  margin-left: 80px;
+  margin: auto;
+  height: 250px;
 }
 .Fly {
   color: #f5a623;
 }
 .checkout {
-  background-color: blue;
+  background-color: #f5a623;
   color: white;
-  padding: 10px;
-  width: 300px;
-  font-weight: bold;
+  width: 250px;
+  padding: 8px;
+  width: 250px;
+  font-weight: 10px;
   font-size: 25px;
   border-radius: 1rem;
 }
@@ -229,8 +234,15 @@ label {
 ul {
   list-style-type: none;
 }
+
+/* Cart Price Summery */
+
 .cartItemContent {
   display: flex;
+}
+.cartItemContent .products {
+  display: inline-block;
+  height: 350px;
 }
 .cartItemContent h3 {
   display: block;
@@ -394,4 +406,33 @@ ul {
 .productList img {
   height: 170px;
   width: 180px;
+}
+
+/* Indudal Page StyleSheet */
+
+.indudalProductCardList {
+  display: flex;
+}
+.indudalProductCard {
+  width: 300px;
+  margin-left: 60px;
+}
+.IndudalProductAllInfo {
+  /* background-color: pink; */
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 250px;
+  width: 600px;
+  background-color: #dff0d8;
+}
+.IndudalProductAllInfo h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+.IndudalProductAllInfo p {
+  font-weight: 300px;
+  font-size: 20px;
 }

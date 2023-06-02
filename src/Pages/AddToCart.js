@@ -42,35 +42,39 @@ export const AddToCart = () => {
   return (
     <div className="cartItemContent">
       <h3>MY CART({cartItem.length})</h3>
-      {cartItem.map((product) => {
-        return (
-          <div key={product.name} className="product-card">
-            <div className="productList">
-              <img src={product.img} alt={product.name}></img>
-              {product.name}
-              <br />
-              {product.details} <br />
-              {product.currency} {product.price} <br />
-              <br />
-              Quantity :{product.quantity}
-              <div className="cart-button">
-                <button onClick={() => increaseProductBtn(product)}>+</button>{" "}
-                {product.quantity}{" "}
-                <button onClick={() => decreaseProductBtn(product)}>-</button>{" "}
+      <div className="products">
+        {cartItem.map((product) => {
+          return (
+            <div key={product.name} className="product-card">
+              <div className="productList">
+                <img src={product.img} alt={product.name}></img>
+                {product.name}
+                <br />
+                {product.details} <br />
+                {product.currency} {product.price} <br />
+                <br />
+                Quantity :{product.quantity}
+                <div className="cart-button">
+                  <button onClick={() => increaseProductBtn(product)}>+</button>{" "}
+                  {product.quantity}{" "}
+                  <button onClick={() => decreaseProductBtn(product)}>-</button>{" "}
+                </div>
+                <button onClick={() => removeFromCart(product.id)}>
+                  Remove from cart
+                </button>{" "}
+                <button onClick={() => handleWishListBtn(product)}>
+                  Add To Wishlist
+                </button>
+                {showSuccessMessage && (
+                  <div className="success-message">
+                    Item Successfully Added!{" "}
+                  </div>
+                )}
               </div>
-              <button onClick={() => removeFromCart(product.id)}>
-                Remove from cart
-              </button>{" "}
-              <button onClick={() => handleWishListBtn(product)}>
-                Add To Wishlist
-              </button>
-              {showSuccessMessage && (
-                <div className="success-message">Item Successfully Added! </div>
-              )}
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
 
       <div className="price-Tag">
         <h3>Cart Price Details</h3>

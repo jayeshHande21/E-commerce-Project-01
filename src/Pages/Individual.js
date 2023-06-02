@@ -21,7 +21,7 @@ import img16 from "../Images/img16.jpeg";
 import img17 from "../Images/img17.jpeg";
 import img18 from "../Images/img18.jpeg";
 
-// import { BootProvider } from "../Context/BootContext";
+import { BootProvider } from "../Context/BootContext";
 
 export const Individual = () => {
   const { data } = useContext(BootContext);
@@ -30,26 +30,64 @@ export const Individual = () => {
   const showIndividual = data.filter((product) => product.id === id);
   console.log(showIndividual);
 
+  const { showSuccessMessage, handleCartBtn } = useContext(BootContext);
+
   return (
-    <div>
-      <h1>This is Individual Page </h1>
-      {showIndividual.map((product) => {
-        return (
-          <div key={product.name} className="product-card">
-            <div className="productList">
-              <img src={product.img} alt={product.name}></img>
-              {product.name}
-              <br />
-              {product.details} <br />
-              {product.currency} {product.price} <br />
-              <br />
-              Category : {product.category} <br />
-              Size : {product.size} <br />
-              Rating : {product.rating} <br />
+    <div className="indudalProductCardList">
+      <div className="indudalProductCard">
+        {showIndividual.map((product) => {
+          return (
+            <div key={product.name} className="product-card">
+              <div className="productList">
+                {/* <p
+                className="indidual-wishlistBtn"
+                onClick={() => handleWishListBtn(product)}
+              >
+                <span className="wishlistSymbol">🤍</span>
+              </p> */}
+                <img src={product.img} alt={product.name}></img>
+                {product.name}
+                <br />
+                {product.details} <br />
+                {product.currency} {product.price} <br />
+                <br />
+                Category : {product.category} <br />
+                Size : {product.size} <br />
+                Rating : {product.rating} <br />
+                <button
+                  className="explore-cartBtn"
+                  onClick={() => handleCartBtn(product)}
+                >
+                  <span className="explore-cart-symbol">🛒</span>Add To Cart
+                </button>{" "}
+                {showSuccessMessage && (
+                  <div className="success-message">
+                    Item Successfully Added!{" "}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+      <div className="IndudalProductDetails">
+        {showIndividual.map((product) => {
+          return (
+            <div className="IndudalProductAllInfo">
+              <h1>{product.name}</h1>
+              <br />
+              <p> {product.details} </p> <br />
+              <p>
+                {" "}
+                {product.currency} {product.price}
+              </p>{" "}
+              <p>Category : {product.category} </p> <br />
+              <p>Size : {product.size}</p> <br />
+              <p>Rating : {product.rating}</p> <br />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -43,9 +43,8 @@ export const AddToWishList = () => {
               {product.details} <br />
               {product.currency} {product.price} <br />
               <br />
-              Number of Item: {totalWishListItem}{" "}
-              <button onClick={increaseWishListTotal}>+</button>
-              <br />
+              {/* Number of Item: {totalWishListItem}{" "}
+              <button onClick={increaseWishListTotal}>+</button> */}
               <button onClick={() => removeFromWishList(product.id)}>
                 Remove from Wishlist
               </button>
@@ -54,7 +53,6 @@ export const AddToWishList = () => {
                   Item Successfully Removed!
                 </div>
               )}
-              <br />
               <button onClick={() => handleCartBtn(product)}>
                 Add to Cart
               </button>

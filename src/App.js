@@ -67,10 +67,10 @@ export default function App() {
             <span>Explore</span>
           </NavLink>{" "}
           <NavLink to={"/AddToWishList"} style={getActiveStyle}>
-            <span>wishlist({wishlistItem.length})</span>
+            <span>🧡({wishlistItem.length})</span>
           </NavLink>{" "}
           <NavLink to={"/AddToCart"} style={getActiveStyle}>
-            <span>Cart({cartItem.length})</span>
+            <span>🛒({cartItem.length})</span>
           </NavLink>{" "}
           {!isLoggedIn ? (
             <NavLink to="/Login">
@@ -78,7 +78,7 @@ export default function App() {
             </NavLink>
           ) : (
             <NavLink to={"/UserProfile"} style={getActiveStyle}>
-              <span>User</span>
+              <span>🤵</span>
             </NavLink>
           )}
         </nav>
