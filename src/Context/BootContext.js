@@ -13,6 +13,7 @@ export const BootProvider = ({ children }) => {
   const [totalWishListItem, setTotalWishListItem] = useState(1);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [totalCartPrice, setTotalCartPrice] = useState();
+  const [rangeValue, setRangeValue] = useState(0);
 
   const categoryClickHandler = (category) => {
     console.log(category);
@@ -100,7 +101,14 @@ export const BootProvider = ({ children }) => {
 
   //Range Filter
   const rangeFilter = (event) => {
-    console.log(event.targrt.value);
+    const productInRange = event.target.value;
+    setRangeValue(productInRange);
+    if (productInRange) {
+      const product = data.filter((item) => item.price <= productInRange);
+      setProductsToDisplay(product);
+    } else {
+      setProductsToDisplay(data);
+    }
   };
 
   //ClearFilter
@@ -199,8 +207,9 @@ export const BootProvider = ({ children }) => {
         increaseProductBtn,
         decreaseProductBtn,
         rangeFilter,
+        rangeValue,
         setTotalCartPrice,
-        totalCartPrice
+        totalCartPrice,
       }}
     >
       {" "}

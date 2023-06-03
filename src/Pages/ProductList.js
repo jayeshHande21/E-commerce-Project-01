@@ -17,6 +17,7 @@ export const ProductList = () => {
     showSuccessMessage,
     clearFilter,
     rangeFilter,
+    rangeValue,
   } = useContext(BootContext);
 
   const [isLoading, setIsLoading] = useState(true);
@@ -39,10 +40,18 @@ export const ProductList = () => {
               Clear
             </button>
             <h4>Price</h4>
-            <label>
-              0 <input type="range" max="1800" min="0" onChange={rangeFilter} />
-              1810
+            <label className="filterLabel">
+              <p>1795</p>{" "}
+              <input
+                type="range"
+                max="42691"
+                min="1795"
+                value={rangeValue}
+                onChange={rangeFilter}
+              />{" "}
+              <p>42691</p>
             </label>
+            <p style={{ fontSize: "18px" }}>{rangeValue}</p>
             <h4>Categories</h4>
             <div className="categories">
               <label>
@@ -158,7 +167,10 @@ export const ProductList = () => {
                     >
                       <span className="wishlistSymbol">🤍</span>
                     </p>
-                    <NavLink to={`/Individual/${product.id}`}>
+                    <NavLink
+                      to={`/Individual/${product.id}`}
+                      className="nav-link"
+                    >
                       <img src={product.img} alt={product.name} />
                       <p>
                         {product.name}
@@ -208,6 +220,14 @@ export const ProductList = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="footer">
+            <h2>
+              Feet<span className="Fly">Fly</span>{" "}
+            </h2>
+            <h4>
+              Developed By <a href="">@JayeshHande</a>
+            </h4>
           </div>
         </>
       )}

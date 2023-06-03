@@ -63,13 +63,25 @@ export default function App() {
           {/* <NavLink to="/" style={getActiveStyle}>
             <span>Home</span>
           </NavLink>{" "} */}
-          <NavLink to={"/ProductList"} style={getActiveStyle}>
+          <NavLink
+            to={"/ProductList"}
+            style={getActiveStyle}
+            className="nav-link"
+          >
             <span>Explore</span>
           </NavLink>{" "}
-          <NavLink to={"/AddToWishList"} style={getActiveStyle}>
+          <NavLink
+            to={"/AddToWishList"}
+            style={getActiveStyle}
+            className="nav-link"
+          >
             <span>🧡({wishlistItem.length})</span>
           </NavLink>{" "}
-          <NavLink to={"/AddToCart"} style={getActiveStyle}>
+          <NavLink
+            to={"/AddToCart"}
+            style={getActiveStyle}
+            className="nav-link"
+          >
             <span>🛒({cartItem.length})</span>
           </NavLink>{" "}
           {!isLoggedIn ? (
@@ -77,7 +89,11 @@ export default function App() {
               <button>LogIn</button>
             </NavLink>
           ) : (
-            <NavLink to={"/UserProfile"} style={getActiveStyle}>
+            <NavLink
+              to={"/UserProfile"}
+              style={getActiveStyle}
+              className="nav-link"
+            >
               <span>🤵</span>
             </NavLink>
           )}
