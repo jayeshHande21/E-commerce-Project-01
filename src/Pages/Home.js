@@ -10,6 +10,7 @@ export const Home = () => {
   return (
     <div className="HomeContent">
       <img src={HomeImg} alt="Here is Home Page"></img>
+
       {CategoriesDB.map((product) => {
         return (
           <div className="category-card" key={product.name}>
@@ -20,11 +21,12 @@ export const Home = () => {
               <h3>New Arrival</h3>
 
               <p className="categoryHome"> {product.category}</p>
-              <hp>Best Collections Here</hp>
+              <h4>Best Collections Here</h4>
             </div>
           </div>
         );
       })}
+
       <div className="footer">
         <h2>
           Feet<span className="Fly">Fly</span>{" "}

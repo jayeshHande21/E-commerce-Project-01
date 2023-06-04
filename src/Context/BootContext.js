@@ -13,6 +13,8 @@ export const BootProvider = ({ children }) => {
   const [productsToDisplay, setProductsToDisplay] = useState(ProductDB);
   const [totalWishListItem, setTotalWishListItem] = useState(1);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showRemoveSuccessMessage, setShowRemoveSuccessMessage] =
+    useState(false);
   const [totalCartPrice, setTotalCartPrice] = useState();
   const [rangeValue, setRangeValue] = useState(0);
 
@@ -96,9 +98,9 @@ export const BootProvider = ({ children }) => {
     const removedItem = wishlistItem.filter((item) => item.id !== productID);
     setWishlistItem(removedItem);
 
-    setShowSuccessMessage(true);
+    setShowRemoveSuccessMessage(true);
     setTimeout(() => {
-      setShowSuccessMessage(false);
+      setShowRemoveSuccessMessage(false);
     }, 2000);
   };
   //Handle All Filters
@@ -203,6 +205,8 @@ export const BootProvider = ({ children }) => {
         removeFromCart,
         productsToDisplay,
         removeFromWishList,
+        showRemoveSuccessMessage,
+        setShowRemoveSuccessMessage,
         totalWishListItem,
         increaseWishListTotal,
         handleSearch,

@@ -28,6 +28,7 @@ export const AddToWishList = () => {
     totalWishListItem,
     increaseWishListTotal,
     showSuccessMessage,
+    showRemoveSuccessMessage,
   } = useContext(BootContext);
 
   return (
@@ -46,9 +47,9 @@ export const AddToWishList = () => {
               {/* Number of Item: {totalWishListItem}{" "}
               <button onClick={increaseWishListTotal}>+</button> */}
               <button onClick={() => removeFromWishList(product.id)}>
-                Remove from Wishlist
+                Remove
               </button>
-              {showSuccessMessage && (
+              {showRemoveSuccessMessage && (
                 <div className="success-message">
                   Item Successfully Removed!
                 </div>
