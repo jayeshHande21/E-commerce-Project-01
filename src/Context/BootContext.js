@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { ProductDB } from "../Pages/ProductDB";
+import { Navigate, useNavigate } from "react-router-dom";
 // import { NavLink } from "react-router-dom";
 // import { v4 as uuid } from "uuid";
 
@@ -15,13 +16,16 @@ export const BootProvider = ({ children }) => {
   const [totalCartPrice, setTotalCartPrice] = useState();
   const [rangeValue, setRangeValue] = useState(0);
 
+  const Navigate = useNavigate();
+
   const categoryClickHandler = (category) => {
-    console.log(category);
     const checkCategory = data.filter(
       (product) => product.productCategory === category
     );
-    // console.log(checkCategory);
+    console.log(checkCategory);
+
     setProductsToDisplay(checkCategory);
+    Navigate("/ProductList");
   };
 
   //Cart Buttton

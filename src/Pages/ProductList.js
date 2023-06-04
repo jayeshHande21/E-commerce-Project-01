@@ -228,6 +228,18 @@ export const ProductList = () => {
             <h4>
               Developed By <a href="">@JayeshHande</a>
             </h4>
+            <p>
+              {" "}
+              <a href="">Insta</a>
+            </p>
+            <p>
+              {" "}
+              <a href="">Twitter</a>
+            </p>
+            <p>
+              {" "}
+              <a href="">Discord</a>
+            </p>
           </div>
         </>
       )}

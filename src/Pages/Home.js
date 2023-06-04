@@ -15,22 +15,36 @@ export const Home = () => {
           <div className="category-card" key={product.name}>
             <div
               className="category-list"
-              // onClick={() => categoryClickHandler(product.category)}
+              onClick={() => categoryClickHandler(product.category)}
             >
-              <NavLink
-                className="nav-link"
-                to="/ProductList.js"
-                onClick={() => categoryClickHandler(product.category)}
-              >
-                <h3>New Arrival</h3>
+              <h3>New Arrival</h3>
 
-                <p className="categoryHome"> {product.category}</p>
-                <hp>Best Collections Here</hp>
-              </NavLink>
+              <p className="categoryHome"> {product.category}</p>
+              <hp>Best Collections Here</hp>
             </div>
           </div>
         );
       })}
+      <div className="footer">
+        <h2>
+          Feet<span className="Fly">Fly</span>{" "}
+        </h2>
+        <h4>
+          Developed By <a href="">@JayeshHande</a>
+        </h4>
+        <p>
+          {" "}
+          <a href="">Insta</a>
+        </p>
+        <p>
+          {" "}
+          <a href="">Twitter</a>
+        </p>
+        <p>
+          {" "}
+          <a href="">Discord</a>
+        </p>
+      </div>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { BootContext } from "..";
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+import deleteImg from "../Images/deleteImg.png";
 import img1 from "../Images/img1.jpeg";
 import img2 from "../Images/img2.jpeg";
 import img3 from "../Images/img3.jpeg";
@@ -60,7 +61,7 @@ export const AddToCart = () => {
                   <button onClick={() => decreaseProductBtn(product)}>-</button>{" "}
                 </div>
                 <button onClick={() => removeFromCart(product.id)}>
-                  Remove from cart
+                  Remove
                 </button>{" "}
                 <button onClick={() => handleWishListBtn(product)}>
                   Add To Wishlist

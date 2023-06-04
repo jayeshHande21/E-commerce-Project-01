@@ -21,7 +21,8 @@ import Mockman from "mockman-js";
 export default function App() {
   const { isLoggedIn } = useContext(AuthContext);
 
-  const { handleSearch, cartItem, wishlistItem } = useContext(BootContext);
+  const { handleSearch, cartItem, wishlistItem, setProductsToDisplay, data } =
+    useContext(BootContext);
   // const location = useLocation();
   // const navigate = useNavigate();
 
@@ -38,6 +39,11 @@ export default function App() {
     padding: isActive ? "1rem" : "0.5rem",
     color: isActive ? "red" : "",
   });
+
+  const handleExploreBtn = () => {
+    console.log("clicked");
+    setProductsToDisplay(data);
+  };
 
   return (
     <div className="App">
@@ -60,13 +66,11 @@ export default function App() {
         </div>
 
         <nav>
-          {/* <NavLink to="/" style={getActiveStyle}>
-            <span>Home</span>
-          </NavLink>{" "} */}
           <NavLink
             to={"/ProductList"}
             style={getActiveStyle}
             className="nav-link"
+            onClick={() => handleExploreBtn()}
           >
             <span>Explore</span>
           </NavLink>{" "}
