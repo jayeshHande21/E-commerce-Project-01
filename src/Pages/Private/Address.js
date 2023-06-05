@@ -9,7 +9,7 @@ export const Address = () => {
     address: "",
     dist: "",
     state: "",
-    number: ""
+    number: "",
   });
 
   const [submittedData, setSubmittedData] = useState([]);
@@ -26,7 +26,7 @@ export const Address = () => {
   const handleFormData = (event) => {
     setFormData({
       ...formData,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
   return (

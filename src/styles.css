@@ -227,7 +227,11 @@ label {
   height: 40px;
   border-radius: 0.5rem;
   margin: auto;
+  background-color: #f5a623;
+  font-weight: bold;
+  font-size: larger;
 }
+
 .right {
   margin-left: 100px;
 }
