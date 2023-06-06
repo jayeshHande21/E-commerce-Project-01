@@ -228,7 +228,7 @@ export const ProductList = () => {
             <h4>
               Developed By <a href="">@JayeshHande</a>
             </h4>
-            <p>
+            {/* <p>
               {" "}
               <a href="">Insta</a>
             </p>
@@ -239,7 +239,7 @@ export const ProductList = () => {
             <p>
               {" "}
               <a href="">Discord</a>
-            </p>
+            </p> */}
           </div>
         </>
       )}

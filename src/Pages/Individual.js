@@ -70,7 +70,7 @@ export const Individual = () => {
           );
         })}
       </div>
-      <div className="IndudalProductDetails">
+      {/* <div className="IndudalProductDetails">
         {showIndividual.map((product) => {
           return (
             <div className="IndudalProductAllInfo">
@@ -87,7 +87,7 @@ export const Individual = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

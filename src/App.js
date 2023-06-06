@@ -15,11 +15,12 @@ import { BootContext } from "./Context/BootContext";
 
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Mockman from "mockman-js";
 
 export default function App() {
   const { isLoggedIn } = useContext(AuthContext);
+  const [isLoading, setIsLoading] = useState(false);
 
   const { handleSearch, cartItem, wishlistItem, setProductsToDisplay, data } =
     useContext(BootContext);
@@ -40,9 +41,14 @@ export default function App() {
     color: isActive ? "red" : "",
   });
 
-  const handleExploreBtn = () => {
-    setProductsToDisplay(data);
-  };
+  // const handleExploreBtn = () => {
+  //   setIsLoading(true);
+  //   setProductsToDisplay(data);
+
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 1000);
+  // };
 
   return (
     <div className="App">
@@ -69,7 +75,7 @@ export default function App() {
             to={"/ProductList"}
             style={getActiveStyle}
             className="nav-link"
-            onClick={() => handleExploreBtn()}
+            // onClick={handleExploreBtn}
           >
             <span>Explore</span>
           </NavLink>{" "}
@@ -89,7 +95,7 @@ export default function App() {
           </NavLink>{" "}
           {!isLoggedIn ? (
             <NavLink to="/Login">
-              <button>LogIn</button>
+              <button className="loginBtn">LogIn</button>
             </NavLink>
           ) : (
             <NavLink
