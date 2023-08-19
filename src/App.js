@@ -66,6 +66,7 @@ export default function App() {
               placeholder="Search Product here"
               type="search"
               onChange={handleSearch}
+              style={{ padding: "20px" }}
             />
           </label>
         </div>
